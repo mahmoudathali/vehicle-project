@@ -19,7 +19,7 @@ export const Layout = ({ children }) => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2">
               <Car className="w-8 h-8 text-[#0a192f]" />
-              <span className="text-xl font-bold text-[#0a192f]">Automobile Unterm Schloß</span>
+              <span className="text-xl font-bold text-[#0a192f]">Mahmoudath Car Deal</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -118,7 +118,7 @@ export const Layout = ({ children }) => {
       <footer className="bg-[#0a192f] text-white py-12">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">Automobile Unterm Schloß</h3>
+            <h3 className="text-lg font-bold mb-4">Mahmoudath Car Deal</h3>
             <p className="text-sm text-gray-300">
               Kaiser-Otto-Straße 33<br />
               06484 Quedlinburg<br />
@@ -155,7 +155,7 @@ export const Layout = ({ children }) => {
         </div>
         <div className="container mx-auto px-4 mt-8 pt-8 border-t border-gray-800">
           <p className="text-sm text-gray-400 text-center">
-            © {new Date().getFullYear()} Automobile Unterm Schloß. Tous droits réservés.
+            © {new Date().getFullYear()} Mahmoudath Car Deal. Tous droits réservés.
           </p>
         </div>
       </footer>
