@@ -71,8 +71,8 @@
        transmission: 'Automatique',
        color: 'Gris',
        bodyType: 'Berline',
-       image: '/cv.jpg',
-       images: ['/cv.jpg', '/cv.jpg'],
+       image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg/1200px-Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg',
+       images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg/1200px-Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg/1200px-Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      },
      {
@@ -86,7 +86,7 @@
        transmission: 'Manuelle',
        color: 'Noir',
        bodyType: 'Berline',
-       image: '/pn1.jpg',
+       image: 'https://www.peugeot.fr/content/dam/peugeot/master/b2c/our-range/showroom/208/2024-09-october-window-evolution-208-wl/new-208---hybrid-page---wl/PEUGEOT_208_HYBRID_STYLE_2410STYP_001_FR_632x632.jpg?imwidth=768',
        images: ['/pn1.jpg', '/pn2.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      },
@@ -101,7 +101,7 @@
        transmission: 'Manuelle',
        color: 'Blanc',
        bodyType: 'Berline',
-       image: '/image.jpg',
+       image: 'https://www.peugeot.fr/content/dam/peugeot/master/b2c/our-range/showroom/208/2024-09-october-window-evolution-208-wl/new-208---hybrid-page---wl/PEUGEOT_208_HYBRID_STYLE_2410STYP_001_FR_632x632.jpg?imwidth=768',
        images: ['/image.jpg', '/image.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      },
@@ -116,7 +116,7 @@
        transmission: 'Manuelle',
        color: 'Bleu',
        bodyType: 'Berline',
-       image: '/citroen.jpg',
+       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn05DxtCnYS4WjSIXnVEbrGCDzn9srT8mkNA&s',
        images: ['/citroen.jpg', '/citroen.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      },
@@ -131,7 +131,7 @@
        transmission: 'Manuelle',
        color: 'Rouge',
        bodyType: 'Berline',
-       image: '/ford.jpg',
+       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9Mihfh2rdUhRwj_FHQP4BCqgY-z6Ab_ePA&s',
        images: ['/ford.jpg', '/ford.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      },
@@ -146,7 +146,7 @@
        transmission: 'Manuelle',
        color: 'Blanc',
        bodyType: 'Berline',
-       image: '/citroen.jpg',
+       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn05DxtCnYS4WjSIXnVEbrGCDzn9srT8mkNA&s',
        images: ['/citroen.jpg', '/citroen.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      }
