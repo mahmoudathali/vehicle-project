@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -151,11 +150,12 @@ export const Vehicles = () => {
 
   const brands = Array.from(new Set(vehicles.map(v => v.brand)));
 
-  const filteredVehicles = vehicles.filter(v => {
-    const matchBrand = selectedBrand ? v.brand.toLowerCase().includes(selectedBrand.toLowerCase()) : true;
-    const matchModel = v.model.toLowerCase().includes(search.toLowerCase());
-    const matchSearchBrand = v.brand.toLowerCase().includes(search.toLowerCase());
-    return (matchBrand && matchModel) || matchSearchBrand;
+  const filteredVehicles = vehicles.filter((v) => {
+    const brandMatch = selectedBrand ? v.brand === selectedBrand : true;
+    const searchLower = search.toLowerCase();
+    const searchMatch =
+      v.model.toLowerCase().includes(searchLower) || v.brand.toLowerCase().includes(searchLower);
+    return brandMatch && searchMatch;
   });
 
   if (loading) return <Loader />;
@@ -167,14 +167,16 @@ export const Vehicles = () => {
           Notre Collection de Véhicules
         </h1>
 
-        {/* Section marques */}
-        <div className="flex flex-wrap justify-center gap-6 mb-8">
+        {/* Boutons de marques */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
           {brands.map((brand) => (
             <button
               key={brand}
               onClick={() => setSelectedBrand(brand === selectedBrand ? '' : brand)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full border shadow-sm transition-all ${
-                selectedBrand === brand ? 'bg-[#0a192f] text-white' : 'bg-white text-[#0a192f] border-[#0a192f]'
+                selectedBrand === brand
+                  ? 'bg-[#0a192f] text-white'
+                  : 'bg-white text-[#0a192f] border-[#0a192f]'
               } hover:bg-[#ffd700] hover:text-black`}
             >
               {brandLogos[brand] && (
@@ -186,7 +188,7 @@ export const Vehicles = () => {
         </div>
 
         {/* Barre de recherche */}
-        <div className="max-w-xl mx-auto mb-12 relative">
+        <div className="max-w-xl mx-auto mb-8 relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             type="text"
@@ -197,7 +199,22 @@ export const Vehicles = () => {
           />
         </div>
 
-        {/* Résultats */}
+        {/* Bouton de réinitialisation */}
+        {(selectedBrand || search) && (
+          <div className="text-center mb-8">
+            <button
+              onClick={() => {
+                setSelectedBrand('');
+                setSearch('');
+              }}
+              className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
+            >
+              Réinitialiser les filtres
+            </button>
+          </div>
+        )}
+
+        {/* Résultats filtrés */}
         {filteredVehicles.length === 0 ? (
           <p className="text-center text-gray-500">Aucun véhicule trouvé.</p>
         ) : (
@@ -212,15 +229,24 @@ export const Vehicles = () => {
               >
                 <img src={vehicle.image} alt={vehicle.model} className="w-full h-56 object-cover" />
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-[#0a192f] mb-1">{vehicle.brand} {vehicle.model}</h2>
+                  <h2 className="text-xl font-bold text-[#0a192f] mb-1">
+                    {vehicle.brand} {vehicle.model}
+                  </h2>
                   <div className="flex items-center mb-2">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-[#ffd700] fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-600 text-sm mb-2">{vehicle.year} · {vehicle.fuel} · {vehicle.transmission}</p>
-                  <p className="text-[#0a192f] font-bold text-lg mb-4">{vehicle.price.toLocaleString('fr-FR')} €</p>
-                  <Link to={`/vehicles/${vehicle.id}`} className="block text-center bg-[#0a192f] text-white py-2 rounded-lg hover:bg-[#0a192f]/90 transition">
+                  <p className="text-gray-600 text-sm mb-2">
+                    {vehicle.year} · {vehicle.fuel} · {vehicle.transmission}
+                  </p>
+                  <p className="text-[#0a192f] font-bold text-lg mb-4">
+                    {vehicle.price.toLocaleString('fr-FR')} €
+                  </p>
+                  <Link
+                    to={`/vehicles/${vehicle.id}`}
+                    className="block text-center bg-[#0a192f] text-white py-2 rounded-lg hover:bg-[#0a192f]/90 transition"
+                  >
                     Voir le véhicule
                   </Link>
                 </div>
