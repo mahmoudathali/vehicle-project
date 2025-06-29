@@ -30,7 +30,7 @@ const initialVehicles = [
     transmission: 'Automatique',
     color: 'Bleu',
     bodyType: 'Coupé',
-    image: 'public/b.png'
+    image: 'https://cdn.motor1.com/images/mgl/NGZB0Y/s1/manhart-mh8-800-limited-01-10.jpg'
   },
   {
     id: '3',
@@ -43,7 +43,7 @@ const initialVehicles = [
     transmission: 'Automatique',
     color: 'Gris',
     bodyType: 'Berline',
-    image: '/audi.jpg'
+    image: 'https://cdn.motor1.com/images/mgl/9m4RBp/s3/2025-audi-e-tron-gt.jpg'
   },
   {
     id: '4',
@@ -56,7 +56,7 @@ const initialVehicles = [
     transmission: 'Automatique',
     color: 'Noir',
     bodyType: 'Berline',
-    image: '/vw.jpg'
+    image: 'https://cdn-xy.drivek.com/eyJidWNrZXQiOiJkYXRhay1jZG4teHkiLCJrZXkiOiJjb25maWd1cmF0b3ItaW1ncy9jYXJzL2ZyL29yaWdpbmFsL1ZPTEtTV0FHRU4vUE9MTy80MDQ4NV9IQVRDSEJBQ0stNS1ET09SUy92b2xrc3dhZ2VuLXBvbG8tMjAyMS1mcm9udC1zaWRlLTEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDI0LCJoZWlnaHQiOm51bGwsImZpdCI6ImNvdmVyIn19fQ=='
   },
   {
     id: '5',
@@ -69,7 +69,7 @@ const initialVehicles = [
     transmission: 'Automatique',
     color: 'Gris',
     bodyType: 'Berline',
-    image: '/cv.jpg'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg/1200px-Renault_Clio_R.S._Line_%28V%29_%E2%80%93_f_17102021.jpg'
   },
   {
     id: '6',
@@ -82,7 +82,7 @@ const initialVehicles = [
     transmission: 'Manuelle',
     color: 'Noir',
     bodyType: 'Berline',
-    image: '/pn1.jpg'
+    image: 'https://www.peugeot.fr/content/dam/peugeot/master/b2c/our-range/showroom/208/2024-09-october-window-evolution-208-wl/new-208---hybrid-page---wl/PEUGEOT_208_HYBRID_STYLE_2410STYP_001_FR_632x632.jpg?imwidth=768'
   },
   {
     id: '7',
@@ -95,7 +95,7 @@ const initialVehicles = [
     transmission: 'Manuelle',
     color: 'Blanc',
     bodyType: 'Berline',
-    image: '/image.jpg'
+    image: 'https://www.peugeot.fr/content/dam/peugeot/master/b2c/our-range/showroom/208/2024-09-october-window-evolution-208-wl/new-208---hybrid-page---wl/PEUGEOT_208_HYBRID_STYLE_2410STYP_001_FR_632x632.jpg?imwidth=768'
   },
   {
     id: '8',
@@ -108,7 +108,7 @@ const initialVehicles = [
     transmission: 'Manuelle',
     color: 'Bleu',
     bodyType: 'Berline',
-    image: '/citroen.jpg'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn05DxtCnYS4WjSIXnVEbrGCDzn9srT8mkNA&s'
   },
   {
     id: '9',
@@ -121,7 +121,7 @@ const initialVehicles = [
     transmission: 'Manuelle',
     color: 'Rouge',
     bodyType: 'Berline',
-    image: '/ford.jpg'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9Mihfh2rdUhRwj_FHQP4BCqgY-z6Ab_ePA&s'
   }
 ];
 
