@@ -1,4 +1,4 @@
-// VehicleDetail.tsx (Mis à jour)
+// VehicleDetail.tsx
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronLeft, Star } from 'lucide-react';
@@ -13,16 +13,29 @@ export const VehicleDetail = () => {
 
   const vehicle = vehicleList.find(v => v.id === id);
 
-  if (isLoading || !vehicle) {
-    return <Loader />;
-  }
-
   const handlePurchase = () => {
     withLoading(async () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       navigate(`/purchase/${vehicle.id}`);
     });
   };
+
+  if (isLoading) return <Loader />;
+
+  if (!vehicle) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-center p-8">
+        <h2 className="text-3xl font-bold text-[#0a192f] mb-4">Véhicule introuvable</h2>
+        <p className="text-gray-600 mb-6">Le véhicule que vous recherchez n'existe pas ou a été supprimé.</p>
+        <button
+          onClick={() => navigate('/vehicles')}
+          className="px-6 py-3 bg-[#0a192f] text-white rounded-lg hover:bg-[#0a192f]/90 transition"
+        >
+          Retour à la liste
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -45,16 +58,18 @@ export const VehicleDetail = () => {
                 alt={`${vehicle.brand} ${vehicle.model}`}
                 className="w-full h-96 object-cover rounded-lg"
               />
-              <div className="grid grid-cols-3 gap-4 mt-4">
-                {vehicle.images?.slice(1).map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`${vehicle.brand} ${vehicle.model}`}
-                    className="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity"
-                  />
-                ))}
-              </div>
+              {vehicle.images?.length > 1 && (
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  {vehicle.images.slice(1).map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`${vehicle.brand} ${vehicle.model} ${index}`}
+                      className="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-75 transition-opacity"
+                    />
+                  ))}
+                </div>
+              )}
             </div>
 
             <div>
@@ -94,14 +109,18 @@ export const VehicleDetail = () => {
 
               <div className="mb-8">
                 <h2 className="text-xl font-bold text-[#0a192f] mb-4">Équipements</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {vehicle.features?.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-600">
-                      <span className="w-2 h-2 bg-[#ffd700] rounded-full mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                {vehicle.features?.length > 0 ? (
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {vehicle.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-600">
+                        <span className="w-2 h-2 bg-[#ffd700] rounded-full mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-500">Aucun équipement spécifié.</p>
+                )}
               </div>
 
               <button
