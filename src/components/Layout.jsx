@@ -140,8 +140,8 @@ export const Layout = ({ children }) => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Tél: +49 123 456 789</li>
-              <li>Email: contact@unterm-schloss.de</li>
+              <li>Tél: +33 123 456 789</li>
+              <li>Email: contact@ma-car-deal.fr</li>
             </ul>
           </div>
           <div>
