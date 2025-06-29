@@ -30,7 +30,7 @@ const initialVehicles = [
     transmission: 'Automatique',
     color: 'Bleu',
     bodyType: 'Coupé',
-    image: '/b.png'
+    image: 'public/b.png'
   },
   {
     id: '3',
