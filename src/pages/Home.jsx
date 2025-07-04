@@ -10,7 +10,7 @@ export const Home = () => {
       model: 'S-Class',
       year: 2024,
       price: 125000,
-      image: 'https://images.unsplash.com/photo-1622200984485-d10aa4e7e50d?auto=format&fit=crop&q=80&w=1200',
+      image: 'https://images.unsplash.com/photo-1661589997089-405a6076fc18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       id: '2',
@@ -18,7 +18,7 @@ export const Home = () => {
       model: 'X7',
       year: 2024,
       price: 98000,
-      image: 'https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&q=80&w=1200',
+      image: 'https://static0.carbuzzimages.com/wordpress/wp-content/uploads/2024/03/1099617-7.jpg',
     },
     {
       id: '3',
@@ -33,19 +33,19 @@ export const Home = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Thomas Weber',
+      name: 'Salima AHMADOU',
       rating: 5,
       text: 'Un service exceptionnel et des véhicules de première qualité. Je recommande vivement.',
     },
     {
       id: 2,
-      name: 'Marie Schmidt',
+      name: 'Annick ZHOU',
       rating: 5,
       text: 'L\'équipe est très professionnelle et à l\'écoute. Une expérience d\'achat parfaite.',
     },
     {
       id: 3,
-      name: 'Klaus Fischer',
+      name: 'Serge MAMBO',
       rating: 5,
       text: 'Des voitures magnifiques et un service client irréprochable.',
     },
