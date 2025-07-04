@@ -132,7 +132,7 @@
        color: 'Rouge',
        bodyType: 'Berline',
        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9Mihfh2rdUhRwj_FHQP4BCqgY-z6Ab_ePA&s',
-       images: ['/ford.jpg', '/ford.jpg'],
+       images: ['/Ford.jpg', '/Ford.jpg'],
        features: ['Radar de recul', 'Sièges chauffants', 'Son Harman Kardon']
      },
      {
